@@ -1,4 +1,4 @@
-# csc515 project
+# CSC515 Hello World
 
 ## Getting started
 
