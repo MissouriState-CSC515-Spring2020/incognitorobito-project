@@ -1,0 +1,89 @@
+html, body {
+  font-family: 'Inter', sans-serif;
+  color: #2B2B2B;
+  height: 100vh;
+  width: 100vw;
+}
+
+p, a {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.masonry-header {
+  font-size: 1rem;
+}
+
+/**************** CUSTOM ELEMENTS *****************/
+
+.photo-masonry {
+  /* border: 2px solid black; */
+}
+
+.masonry-brick {
+  height: 250px;
+  width: 250px;
+  background-color: black;
+}
+
+.nav-header {
+  min-width: 5vw;
+}
+
+/**************** STATES *****************/
+
+.nav-header.inactive {
+  opacity: 0.45;
+}
+
+/**************** CONTAINERS AND LAYOUT HELPERS *****************/
+
+.flexbox {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flexbox.row {
+  flex-direction: row;
+}
+
+.flexbox.col {
+  flex-direction: column;
+}
+
+.flexbox .centered {
+  margin: auto;
+  text-align: center;
+}
+
+.flexbox .mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flexbox .mt-auto {
+  margin-top: auto;
+}
+
+.flexbox .my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.flexbox.center-items {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
