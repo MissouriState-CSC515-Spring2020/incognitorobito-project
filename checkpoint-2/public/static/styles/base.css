@@ -14,14 +14,19 @@ h1, h2, h3, h4, h5 {
   font-weight: bold;
 }
 
+/**************** CUSTOM ELEMENTS *****************/
+
+
+.huge {
+  font-size: 2.5rem;
+}
+
 .masonry-header {
   font-size: 1rem;
 }
 
-/**************** CUSTOM ELEMENTS *****************/
+.album-masonry {
 
-.photo-masonry {
-  /* border: 2px solid black; */
 }
 
 .masonry-brick {
