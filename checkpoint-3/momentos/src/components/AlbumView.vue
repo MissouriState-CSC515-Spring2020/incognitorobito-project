@@ -8,9 +8,9 @@
 
     <div class="columns p-2">
       <div class="column">
-        <h5 class="mb-2"><a href="photo.html">Last Saturday</a></h5>
+        <h5 class="mb-2"><router-link to="/photo">Last Saturday</router-link></h5>
         <div class="flexbox row photo-masonry">
-          <a class="masonry-brick" href="photo.html"></a>
+          <router-link class="masonry-brick" to="/photo"></router-link>
         </div>
       </div>
     </div>

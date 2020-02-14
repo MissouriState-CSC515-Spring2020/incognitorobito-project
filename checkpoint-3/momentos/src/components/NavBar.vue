@@ -3,8 +3,8 @@
   <nav class="columns mb-2" style="margin-top: 2rem;">
     <div class="column col-3 col-sm-10 col-md-6 col-mx-auto mb-2">
       <div class="flexbox row" id="nav-header-container">
-        <h2 class="nav-header active my-auto"><a href="#">All Photos</a></h2>
-        <h2 class="nav-header inactive my-auto"><a href="albums.html">Albums</a></h2>
+        <h2 class="nav-header my-auto" :class="this.$route.path === '/' ? 'active' : 'inactive'"><router-link to="/">All Photos</router-link></h2>
+        <h2 class="nav-header my-auto" :class="this.$route.path === '/albums' ? 'active' : 'inactive'"><router-link to="/albums">Albums</router-link></h2>
       </div>
     </div>
     <div class="column col-9 col-md-6 col-sm-4 col-mx-auto">

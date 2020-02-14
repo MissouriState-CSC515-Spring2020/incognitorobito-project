@@ -18,7 +18,7 @@
                           <p><u>D</u>elete</p>
                           <p><u>P</u>revious</p>
                           <p><u>N</u>ext</p>
-                          <a href="hawaii.html">E<span>xit</span></a>
+                          <router-link to="/albums/hawaii">E<span>xit</span></router-link>
                         </div>
                       </div>
                     </div>
