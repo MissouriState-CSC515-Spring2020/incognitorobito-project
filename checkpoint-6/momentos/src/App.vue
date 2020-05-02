@@ -14,7 +14,7 @@
 <script lang="ts">
 import { Component, Vue, Provide } from 'vue-property-decorator';
 import { VideoService } from './services/VideoService';
-import NavBar from './components/NavBar.vue';
+const NavBar = () => import("./components/NavBar.vue");
 
 @Component({
   components: {
