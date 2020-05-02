@@ -6,9 +6,6 @@ import './registerServiceWorker'
 Vue.use(VueRouter)
 Vue.config.productionTip = false
 
-const ErrorPage = { template: '<h5>An error occured, please try again later.<h5>' }
-const NotFoundPage = { template: '<h5>The item or page you\'re looking for could not be found.<h5>' }
-
 const router = new VueRouter({
   mode: 'history',
   routes: [
@@ -36,11 +33,13 @@ const router = new VueRouter({
     },
     { 
       path: '*',
-      component: NotFoundPage
+      component: () =>
+            import('@/components/NotFound.vue'),
     },
     { 
       path: '/error',
-      component: ErrorPage,
+      component: () =>
+            import('@/components/Error.vue'),
     },
   ]
 });

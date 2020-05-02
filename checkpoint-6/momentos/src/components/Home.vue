@@ -32,7 +32,6 @@ export default class Recent extends Vue {
   {
     this.popularVideos = await this.videoService.getMostPopularVideos(10);
   }
-
 }
 </script>
 
