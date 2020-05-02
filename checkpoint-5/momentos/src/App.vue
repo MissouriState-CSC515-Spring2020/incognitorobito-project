@@ -12,7 +12,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Provide } from 'vue-property-decorator';
+import { VideoService } from './services/VideoService';
 import NavBar from './components/NavBar.vue';
 
 @Component({
@@ -20,7 +21,14 @@ import NavBar from './components/NavBar.vue';
     NavBar
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  @Provide('videoService') private videoService: VideoService = new VideoService();
+
+  created()
+  {
+    this.videoService.initialize();
+  }
+}
 </script>
 
 <style>

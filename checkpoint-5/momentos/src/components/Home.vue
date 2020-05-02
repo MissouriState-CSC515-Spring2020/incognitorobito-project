@@ -1,23 +1,17 @@
 <template>
 
-  <div>
+  <div v-if="this.popularVideos != null">
     <div class="columns" style="padding: 1rem;">
-      <div class="column">
-        <h5 class="mb-2">Today</h5>
-        <div class="flexbox row photo-masonry mx-auto">
-          <div class="masonry-brick">1</div>
-          <div class="masonry-brick">2</div>
-          <div class="masonry-brick">3</div>
-          <div class="masonry-brick">4</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns" style="padding: 1rem;">
-      <div class="column">
-        <h5 class="mb-2">Wed Jan 15</h5>
-        <div class="flexbox row">
-          <div class="masonry-brick">1</div>
+      <div class="column col-sm-10 col-mx-auto">
+        <h5 style="margin-bottom: 1rem;">Today</h5>
+        <div class="flexbox row video-masonry">
+          <a class="masonry-brick"  
+                v-for="(vid, index) in popularVideos" 
+                :href="(`https://www.youtube.com/watch?v=${vid.id}`)"
+                :key="index">
+            <img :src="vid.snippet.thumbnails.high.url" style="max-width: 100%; border-radius: 4px;">
+            <p>{{ vid.snippet.title }}</p>
+          </a>
         </div>
       </div>
     </div>
@@ -26,10 +20,18 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Inject } from 'vue-property-decorator';
+import { VideoService } from '../services/VideoService';
 
 @Component
 export default class Recent extends Vue {
+  @Inject('videoService') private videoService!: VideoService;
+  popularVideos: unknown[] | null = null;
+  
+  async created()
+  {
+    this.popularVideos = await this.videoService.getMostPopularVideos(10);
+  }
 
 }
 </script>

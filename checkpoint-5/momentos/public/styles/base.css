@@ -16,6 +16,14 @@ h1, h2, h3, h4, h5 {
 
 /**************** CUSTOM ELEMENTS *****************/
 
+@media (max-width: 600px) {
+
+  .col-sm-mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .huge {
   font-size: 2.5rem;
 }
@@ -25,15 +33,21 @@ h1, h2, h3, h4, h5 {
 }
 
 .masonry-brick {
-  height: 250px;
-  width: 250px;
-  background-color: black;
-  color: white;
-  padding: 1rem;
-  margin: 0.25rem;
+  height: 200px;
+  width: 300px;
+  padding: 0.25rem 1rem;
+  margin-bottom: 2.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 2px;
 }
 
-.photo-masonry {
+.masonry-brick p {
+  color: black;
+}
+
+.video-masonry {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;

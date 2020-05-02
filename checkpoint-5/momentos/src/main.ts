@@ -23,14 +23,16 @@ const router = new VueRouter({
             import('@/components/Channels.vue')
     },
     { 
-      path: '/channels/ThoughtSlime',
+      path: '/channels/ChadKillingsworth',
       component: () =>
             import('@/components/ChannelView.vue')
     },
     { 
+      name: 'VideoView',
       path: '/video',
       component: () =>
-            import('@/components/VideoView.vue')
+            import('@/components/VideoView.vue'),
+      props: true
     },
     { 
       path: '*',
